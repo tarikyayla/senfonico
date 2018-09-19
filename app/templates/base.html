@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">  
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+          <META HTTP-EQUIV="Expires" CONTENT="-1">
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='ext/bootstrap.min.css') }}">
+        
+        <script src="{{url_for('static',filename='ext/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{url_for('static',filename='ext/bootstrap.min.js')}}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='ext/style.css') }}">
+        <!---
+        <script src="ext/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="C:/Users/tarikyayla/Desktop/senfonico/app/static/ext/bootstrap.min.css">
+        <link rel="stylesheet" href="C:/Users/tarikyayla/Desktop/senfonico/app/static/ext/style.css">
+        <script src="C:/Users/tarikyayla/Desktop/senfonico/app/static/ext/jquery-3.3.1.min.js"></script>
+        --->
+      </head>
+    <body>
+    <div class="ee" >
+    <header>Mini Blog v1</header>
+        <nav>
+          <ul class="navbar">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Team</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </nav>
+      <main>
+          <div class="main">
+            <ul class="postlist">
+              
+            </ul>
+            <div class="addnew"><input type="button" class="btn btn-info btn-lg" id="btnNewPost" data-toggle="modal" data-target="#addpostmodal" value="New Post"></div>
+          </div>
+      </main>
+      <footer>
+          Source : <a href="https://github.com/tarikyayla/senfonico">Github Link</a>
+    </footer>
+</div>
+
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+          <div class="modal-body">
+        <p>Gonna disappear in <span>5</span> second</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+<div id="postmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="modalTitle" class="modal-title">Modal Header</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p id="modalBody">Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+<div id="addpostmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">Add New Post</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        <div id="newpostmodal" class="newpost">
+          <form method="POST" action="/api/add">
+          <ul>
+            <li><input type="text" name="title" placeholder="Title"></li>
+            <li><textarea name="body" name="body" cols="30" rows="10"></textarea></li>
+            <li><input type="submit" value="Post"></li>
+          </ul>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>  
+ <!--<script src="C:/Users/tarikyayla/Desktop/senfonico/app/static/ext/script.js"></script> --->
+<script src="{{url_for('static',filename='ext/script.js')}}"></script> 
+</body>
+
+    
+</html>
