@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $.getJSON("http://localhost/api/posts",function (data) {
+   $.getJSON("./api/posts",function (data) {
            $.each(data,function(index,element){
                var title = element.title;
                if(title.length > 50){
@@ -13,7 +13,7 @@ $(document).ready(function () {
     $(".postlist").on("click","li a",function(e){
         e.preventDefault();
         var id = $(this).attr("value");
-        $.getJSON("http://localhost/api/post/"+id,function (data) {
+        $.getJSON("./api/post/"+id,function (data) {
                 var titleElement = document.getElementById("modalTitle");
                 var bodyElement = document.getElementById("modalBody");
                 titleElement.innerText = data.title;
