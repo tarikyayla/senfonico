@@ -1,0 +1,108 @@
+body{
+    background-color: antiquewhite;
+}
+a:link{
+    color: black;
+}
+nav{
+ padding: 0px;
+ margin: 0px;
+ background-color: rgba(255, 255, 255, 0.22);
+ margin-bottom: 10px;
+ padding-left: 15%;
+}
+nav ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    
+}
+nav ul li{
+    display: inline;
+    padding-right: 10%;
+    color: black;
+    
+}
+nav ul li a:link{
+    color: black;
+}
+header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+footer{
+    padding-top:3.5%;
+    font-size: 12px;
+    text-align: center;
+}
+.postlist{
+    list-style: none;
+    display: grid;
+    padding:0;
+    margin: 0;
+    padding-bottom: 15px;
+    
+
+}
+.postlist li:nth-of-type(2n){
+    background-color: rgba(0, 0, 0, 0.068);
+}
+.postlist li a{
+    font-family: sans-serif;
+    padding-left: 10px;
+    float: left;
+    text-transform: capitalize;
+}
+.postlist li span{
+    float: right;
+    padding-right: 15px;
+}
+.addnew{
+    text-align: center;
+}
+.addnew input{
+    background-color: rgba(0, 0, 0, 0.337);
+    color: white;
+    width : 100%;
+    border: 0px;
+}
+.addnew input:hover{
+    background-color:rgba(0,0,0,0.658);
+    color: white;
+}
+.ee{
+    font-size: 18px;
+    margin : 0 auto;
+    margin-top : 2%;
+    width: 600px;
+}
+.newpost ul{
+    display: block;
+    list-style-type: none;
+}
+.newpost ul li{
+    padding-left: 20px;
+    padding-bottom: 10px;
+
+}
+.newpost input{
+    width: 85%;
+    border-radius: 2%;
+}
+.newpost textarea{
+    width: 85%;
+    font-size: 15px;
+    border-radius: 2%;
+    resize: none;
+}
+
+#modalBody{
+    justify-content: space-between;
+    word-break: break-all;
+}
+
+#modalTitle{
+    justify-content: space-between;
+    word-break: break-all;
+}
