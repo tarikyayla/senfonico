@@ -1,5 +1,5 @@
 
-from flask import Flask,jsonify,request,render_template
+from flask import Flask,jsonify,request,render_template,redirect
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -34,7 +34,7 @@ def new_post():
     db.session.add(new_post)
     db.session.commit()
     result = pSchema.dump(new_post)
-    return render_template("base.html")
+    return redirect("/")
 """
 Aslında ilk başta yazdığımda json verisi gönderirim diye düşünüyordum, sonrasında tekrar uğraşmamak için form şeklinde değiştirdim.
 
