@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   $.getJSON("./api/posts",function (data) {
+   $.getJSON("/api/posts",function (data) {
            $.each(data,function(index,element){
                var title = element.title;
                if(title.length > 50){
