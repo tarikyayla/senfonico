@@ -1,5 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
    $.getJSON("/api/posts",function (data) {
+=======
+   $.getJSON("./api/posts",function (data) {
+>>>>>>> 20506119a5a18ca00fb65c9b1a0542ebfbfd52f9
            $.each(data,function(index,element){
                var title = element.title;
                if(title.length > 50){
